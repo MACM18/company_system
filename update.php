@@ -15,8 +15,9 @@
 
         if(mysqli-num-rows($res)>0){
             $row=mysqli_fetch_asssoc($res);
+        }
             ?>
-                    <lable>Team Num</lable>
+        <lable>Team Num</lable>
         <input type="text" name="teamnum" class="f1"><br><br>
         <lable>Style Num</lable>
         <input type="text" name="stylenum" class="f2"><br><br>
