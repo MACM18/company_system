@@ -8,7 +8,15 @@
 </head>
 <body bgcolor="gray">
     <form action="script.php" method="post">
-        <lable>Team Num</lable>
+        <?php
+        $id=$_GET['id'];
+        $sql1="SELECT * FROM first where id='$id'";
+        $res=mysqli_query($con,$sql);
+
+        if(mysqli-num-rows($res)>0){
+            $row=mysqli_fetch_asssoc($res);
+            ?>
+                    <lable>Team Num</lable>
         <input type="text" name="teamnum" class="f1"><br><br>
         <lable>Style Num</lable>
         <input type="text" name="stylenum" class="f2"><br><br>
@@ -2232,10 +2240,15 @@
                 <td><input type="date" name="3n.127.3" class="3n.127.3"></td>
                 <td><input type="text" name="3n.127.4" class="3n.127.4"></td>
 
-            </tr>   
+            </tr>
+           
+           
+           
+           
+           
+            
 
         </table>
-        <input type="submit" name="save" value="submit" class="saveb">
     </form>
         
 
