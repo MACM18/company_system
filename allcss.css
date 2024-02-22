@@ -28,11 +28,20 @@
 
 }
 
+.divimg1 {
+
+    width: 1400px;
+    height: 100px;
+    margin: -10px;
+   
+}
 .img1 {
 
-    width: 800px;
+    width: 1400px;
     height: 100px;
-    align-items: center;
+    object-fit:unset;
+    
+
 
 }
 .f1{

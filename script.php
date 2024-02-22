@@ -11,7 +11,7 @@ function executeQueries()
     $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
     $dataList = (object) [];
     // Outer loop
-    for ($i = 1; $i <= 100; $i++) {
+    for ($i = 1; $i <= 127; $i++) {
         for ($j = 1; $j <= 4; $j++) {
             // Insert 4 values
             $value = "$i.$j";
@@ -53,7 +53,7 @@ function executeQueries()
     $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
     $dataList = (object) [];
     // Outer loop
-    for ($i = 1; $i <= 100; $i++) {
+    for ($i = 1; $i <= 127; $i++) {
         for ($j = 1; $j <= 4; $j++) {
             // Insert 4 values
             $value = "$i.$j";
@@ -96,7 +96,7 @@ function executeQueries()
     $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
     $dataList = (object) [];
     // Outer loop
-    for ($i = 1; $i <= 100; $i++) {
+    for ($i = 1; $i <= 127; $i++) {
         for ($j = 1; $j <= 4; $j++) {
             // Insert 4 values
             $value = "$i.$j";

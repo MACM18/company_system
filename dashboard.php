@@ -13,10 +13,10 @@
         if(mysqli_num_rows($res)>0){
             while($span=mysqli_fetch_assoc($res)){
 
+            }}
+    <form action="script.php" method="post">
 
-    echo<form action="script.php" method="post">
-
-    <lable>Team Num</lable>
+    echo "<lable>Team Num</lable>";
     <input type="text" name="teamnum" class="f1"><br><br>
     <lable>Style Num</lable>
     <input type="text" name="stylenum" class="f2"><br><br>
