@@ -2,6 +2,6 @@
 $servername='localhost';
 $username='root';
 $password='';
-$dbname='company system';
+$dbname='stat crew';
 $con=mysqli_connect($servername,$username,$password,$dbname)or die ("db connection failed");
 ?>

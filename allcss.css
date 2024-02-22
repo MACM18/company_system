@@ -1,9 +1,123 @@
 .homebtn {
-    font-size: 50px;
+    font-size: 30px;
     color: black;
-    background-color: aqua;
+    background-color:rgb(143, 140, 137);
     border-radius: 10px;
-    margin-top: 450px;
-    margin-left: 600px;
+    margin-top:50px;
+    margin-left:610px;
     
+}
+
+.search {
+    font-size: 30px;
+    color: black;
+    background-color:rgb(143, 140, 137);
+    border-radius: 10px;
+    margin-top:50px;
+    margin-left:600px;
+    border-radius: 10px;
+
+}
+.add {
+    color: black;
+    background-color: rgb(143, 140, 137);
+    font-size:30px;
+    margin-left:600px;
+    margin-top:30px;
+    border-radius:10px;
+
+}
+
+.img1 {
+
+    width: 100px;
+    height: 100px;
+    align-items: center;
+
+}
+.f1{
+    
+    margin-left: 100px;
+}
+
+.f2{
+    
+    margin-left: 102px;
+}
+.f3{
+    
+    margin-left: 32px;
+}
+.f4{
+    
+    margin-left: 136px;
+}
+.f5{
+    
+    margin-left: 115px;
+}
+.f8{
+    
+    margin-left: 75px;
+}
+
+.update {
+
+    color: black;
+    background-color: rgb(143, 140, 137);
+    font-size:30px;
+    margin-left:600px;
+    margin-top:30px;
+    border-radius:10px;
+
+}
+.dashboardbtn1 {
+    color: black;
+    background-color: rgb(143, 140, 137);
+    font-size:30px;
+    margin-left:450px;
+    margin-right: 200px;
+    margin-top:30px;
+    border-radius:10px;
+}
+
+.dashboardbtn2{
+color: black;
+background-color: rgb(143, 140, 137);
+font-size:30px;
+margin-top:30px;
+border-radius:10px;
+}
+
+
+.teamnumhome{
+    width: 500px;
+    height:50px;
+    margin-left: 150px;
+    margin-top: 150px;
+    font-size: 30px;
+
+}
+
+.stylenhm {
+
+    width: 500px;
+    height:50px;
+    margin-left: 133px;
+    margin-top: 30px;
+    font-size: 30px;
+
+}
+
+.l1 {
+    font-size:50px;
+    margin-left:170px;
+    margin-top:150;
+
+}
+
+.l2 {
+    font-size: 50px;
+    margin-left: 170px;
+
 }
