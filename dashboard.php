@@ -8,16 +8,17 @@
 </head>
 <body bgcolor="gray">
 <?php
-        $sql= "SELECT * from stat crew where Team_no='$team' and Style_no='$style'";
+        $sql= "SELECT * from stat crew where Team_no='$team' AND Style_no='$style' AND factory='$factory'";
         $res = mysqli_query($con,$sql);
         if(mysqli_num_rows($res)>0){
             while($span=mysqli_fetch_assoc($res)){
 
             }}
-    <form action="script.php" method="post">
-
+    echo"<form action="script.php" method="post">";
+     <lable>Factory</lable>
+     <input type="text" name="factory" class="f9"><br><br>
     echo "<lable>Team Num</lable>";
-    <input type="text" name="teamnum" class="f1"><br><br>
+    echo"<input type="text" name="teamnum" class="f1"><br><br>"
     <lable>Style Num</lable>
     <input type="text" name="stylenum" class="f2"><br><br>
     <lable>Production Start Date</lable>

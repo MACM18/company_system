@@ -2,13 +2,14 @@
 function executeQueries()
 {
     // First SQL query
-    $stmt = $mysqli->prepare("INSERT INTO data (Team_no, Style_no, Production_start_date, QCD, Peoduct_basket,Chassies_operations,Chassies_new_operations,Chassies_precentage) VALUES (?, ?, ?, ?, ?,?,?,?)");
-    $stmt->bind_param("ssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3']);
+    $stmt = $mysqli->prepare("INSERT INTO data (Team_no, Style_no, Production_start_date, QCD, Peoduct_basket,Chassies_operations,Chassies_new_operations,Chassies_precentage,factory) VALUES (?, ?, ?, ?, ?,?,?,?,?)");
+    $stmt->bind_param("sssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3'],$_POST['factory']);
     $stmt->execute();
     // Second SQL query
     $team = mysqli_real_escape_string($mysqli, $_POST['teamnum']);
     $style = mysqli_real_escape_string($mysqli, $_POST['stylenum']);
-    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
+    $factory = mysqli_real_escape_string($mysqli, $_POST['factory']);
+    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team  AND factory=$factory");
     $dataList = (object) [];
     // Outer loop
     for ($i = 1; $i <= 127; $i++) {
@@ -44,13 +45,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function executeQueries()
 {
     // First SQL query
-    $stmt = $mysqli->prepare("UPDATE stat crew SET(Team_no =?, Style_no=?, Production_start_date=?, QCD=?, Peoduct_basket=?,Chassies_operations=?,Chassies_new_operations=?,Chassies_precentage=?)");
-    $stmt->bind_param("ssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3']);
+    $stmt = $mysqli->prepare("UPDATE stat crew SET(Team_no =?, Style_no=?, Production_start_date=?, QCD=?, Peoduct_basket=?,Chassies_operations=?,Chassies_new_operations=?,Chassies_precentage=?,factory=?)");
+    $stmt->bind_param("sssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3'] ,$_POST['factory']);
     $stmt->execute();
     // Second SQL query
     $team = mysqli_real_escape_string($mysqli, $_POST['teamnum']);
     $style = mysqli_real_escape_string($mysqli, $_POST['stylenum']);
-    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
+    $factory = mysqli_real_escape_string($mysqli, $_POST['factory']);
+    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team AND factory=$factory");
     $dataList = (object) [];
     // Outer loop
     for ($i = 1; $i <= 127; $i++) {
@@ -87,13 +89,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function executeQueries()
 {
     // First SQL query
-    $stmt = $mysqli->prepare("SELECT * from stat crew where(Team_no=?, Style_no=?, Production_start_date=?, QCD=?, Peoduct_basket=?,Chassies_operations=?,Chassies_new_operations=?,Chassies_precentage=?)");
-    $stmt->bind_param("ssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3']);
+    $stmt = $mysqli->prepare("SELECT * from stat crew where(Team_no=?, Style_no=?, Production_start_date=?, QCD=?, Peoduct_basket=?,Chassies_operations=?,Chassies_new_operations=?,Chassies_precentage=?,factory=?)");
+    $stmt->bind_param("sssssssss", $_POST['teamnum'], $_POST['stylenum'], $_POST['startdate'], $_POST['qcd'], $_POST['PB'], $_POST['chasy1'], $_POST['chasy2'], $_POST['chasy3'],$_POST['factory']);
     $stmt->execute();
     // Second SQL query
     $team = mysqli_real_escape_string($mysqli, $_POST['teamnum']);
     $style = mysqli_real_escape_string($mysqli, $_POST['stylenum']);
-    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team");
+    $factory = mysqli_real_escape_string($mysqli, $_POST['factory']);
+    $stmt = $mysqli->prepare("UPDATE data SET Activity_data = ? WHERE Style_no=$style AND Team_no=$team AND factory=$factory");
     $dataList = (object) [];
     // Outer loop
     for ($i = 1; $i <= 127; $i++) {

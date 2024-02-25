@@ -10,7 +10,7 @@
     <form action="script.php" method="post">
         <?php
         $id=$_GET['id'];
-        $sql1="SELECT * FROM first where teamnum='$' and stylenum='stylenum'";
+        $sql1="SELECT * FROM first where teamnum='$team' AND stylenum='$style' AND factory='$factory'";
         $res=mysqli_query($con,$sql);
 
         if(mysqli-num-rows($res)>0){
