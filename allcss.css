@@ -3,7 +3,7 @@
     color: black;
     background-color:rgb(143, 140, 137);
     border-radius: 10px;
-    margin-top:50px;
+    margin-top:30px;
     margin-left:610px;
     
 }
@@ -13,7 +13,7 @@
     color: black;
     background-color:rgb(143, 140, 137);
     border-radius: 10px;
-    margin-top:50px;
+    margin-top:45px;
     margin-left:600px;
     border-radius: 10px;
 
@@ -69,6 +69,10 @@
     
     margin-left: 75px;
 }
+.f9 {
+    margin-left: 122px;
+
+}
 
 .update {
 
@@ -103,8 +107,8 @@ border-radius:10px;
     width: 500px;
     height:50px;
     margin-left: 150px;
-    margin-top: 120px;
-    font-size: 30px;
+    margin-top: 30px;
+    font-size: 25px;
 
 }
 
@@ -113,7 +117,7 @@ border-radius:10px;
     width: 500px;
     height:50px;
     margin-left: 133px;
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 30px;
 
 }
@@ -121,7 +125,7 @@ border-radius:10px;
 .l1 {
     font-size:50px;
     margin-left:170px;
-    margin-top:120;
+   
 
 }
 
@@ -131,3 +135,19 @@ border-radius:10px;
 
 }
 
+.l3 {
+    font-size: 50px;
+    margin-left: 177px;
+  
+
+}
+.factoryhm{
+
+    width: 500px;
+    height:50px;
+    margin-left: 255px;
+    margin-top: 50px;
+    font-size: 30px;
+
+
+}
